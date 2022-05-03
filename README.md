@@ -24,6 +24,31 @@ O principal motivo é que o antingo ASP.NET estava intrisicamente atrelado ao Wi
 
 ### Novidades no ASP.NET Core
 
+3 Pilares importantes: Inovação, Open Source e Multiplataforma.
+
+1 - Inovação: Acompanhamento dos testes de performance dos ASP.NET Core [Link](https://github.com/aspnet/benchmarks)
+2 - Open Source: .NET foundation (instituição que trabalha para deixar o .NET cada vez mais Open Source) [Link](https://dotnetfoundation.org/)
+3 - Multiplataforma (Windows, Linux...)
+
+### .NET Core
+
+.NET Core é multiplataforma e vem para substituir o .NET Framework padrão.
+
+### .NET CLI
+
+Suporte a linha de comando que pode ser realizado a partir do seu terminal. Importante ferrramenta para não ficar apenas dependente do VS.
+
+### .NET Standard Library
+
+
+
+
+
+
+
+
+
+
 
 
 
