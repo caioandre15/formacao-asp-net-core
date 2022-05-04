@@ -48,6 +48,27 @@ O .NET Standard é uma especificação de API que define, dada uma versão, quai
    Simples, leve e um pouco limitado em relação ao VS.
 - Visual Studio (Windows, Free(Community), Professional, Enterprise)  
    Pesado e robusto com muitas funcionalidades que trazem agilidade no desenvolvimento por estarem reunidas todas em um só lugar. 
+   
+### Ambiente
+
+Instalação do .NET, é idicado utilizar as versões LTS, que possuem suporte por vários anos.
+
+Comandos direto no CMD:  
+dotnet --info  
+dotnet -h  
+
+Gerenciamento de versões
+
+Não é um problema ter várias versões do .NET Core instaladas em sua máquina, desde que a versão utilizada no projeto esteja configurada no arquivo global.json 
+
+````
+{
+  "projects": ["src", "tests"],
+  "sdk": {
+    "version": "2.1.402"
+  }
+}
+````
 
 
 
