@@ -32,7 +32,7 @@ O principal motivo era o desempenho e que o antingo ASP.NET estava atrelado ao W
 
 ### .NET Core
 
-.NET Core é multiplataforma e vem para substituir o .NET Framework padrão.
+.NET Core é multiplataforma, compatível com aplicações em nuvem, containers e vem para substituir o .NET Framework padrão.
 
 ### .NET CLI
 
@@ -42,22 +42,12 @@ Suporte a linha de comando que pode ser realizado a partir do seu terminal. Impo
 
 O .NET Standard é uma especificação de API que define, dada uma versão, quais Bibliotecas de Classe (Base Class Libraries) devem ser implementadas.
 
+### IDE's utilizadas
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Visual Studio Code (Multiplataforma, Open Source, Free)
+- Simples, leve e um pouco limitado em relação ao VS.
+Visual Studio (Windows, Free(Community), Professional, Enterprise)
+- Pesado e robusto com muitas funcionalidades que trazem agilidade no desenvolvimento por estarem reunidas todas em um só lugar. 
 
 
 
