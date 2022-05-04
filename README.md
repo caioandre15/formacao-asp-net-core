@@ -54,9 +54,10 @@ O .NET Standard é uma especificação de API que define, dada uma versão, quai
 Instalação do .NET, é idicado utilizar as versões LTS, que possuem suporte por vários anos.
 
 Comandos direto no CMD:  
+````
 dotnet --info  
 dotnet -h  
-
+````
 Gerenciamento de versões
 
 Não é um problema ter várias versões do .NET Core instaladas em sua máquina, desde que a versão utilizada no projeto esteja configurada no arquivo global.json 
