@@ -44,10 +44,10 @@ O .NET Standard é uma especificação de API que define, dada uma versão, quai
 
 ### IDE's utilizadas
 
-Visual Studio Code (Multiplataforma, Open Source, Free)
-- Simples, leve e um pouco limitado em relação ao VS.
-Visual Studio (Windows, Free(Community), Professional, Enterprise)
-- Pesado e robusto com muitas funcionalidades que trazem agilidade no desenvolvimento por estarem reunidas todas em um só lugar. 
+- Visual Studio Code (Multiplataforma, Open Source, Free)  
+   Simples, leve e um pouco limitado em relação ao VS.
+- Visual Studio (Windows, Free(Community), Professional, Enterprise)  
+   Pesado e robusto com muitas funcionalidades que trazem agilidade no desenvolvimento por estarem reunidas todas em um só lugar. 
 
 
 
