@@ -98,9 +98,9 @@ File>New Project>ASP.NET Core Web App>Local Pasta>Criar Projeto.
 
 Conhecendo a estrutura de um projeto:  
 
-- Arquivo .csproj    
-Editando o arquivo .csproj podemos verificar que é nele que fica localizado a versão utilizada do ASP.NET Core, configurações da utilização do docker e de autenticação e etc.
-Definição do aquivo .csproj
+- Arquivo .csproj      
+Editando o arquivo .csproj podemos verificar que é nele que fica localizado a versão utilizada do ASP.NET Core, configurações da utilização do docker e de autenticação e etc.  
+Definição do aquivo .csproj  
 "C# (C Sharp) projeto de programação criado com o Microsoft Visual Studio; contém configurações de projeto e referências aos arquivos usados pelo projeto; salvo no formato MSBuild, que pode ser compilado em um programa executável usando a plataforma MSBuild."
 
 - Connectes Services  
@@ -114,7 +114,7 @@ Definição do site da [documentação da microsoft](https://docs.microsoft.com/
   - Framework (Framework utilizado)
   - SDK (SDK utilizado)
  
-- Properties
+- Properties  
 Dentro desta pasta está localizado o arquivo lauchSettings.json. O principal objetivo deste aquivo é configurar como a aplicação será iniciada dentro do VS.
 
 
