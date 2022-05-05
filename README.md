@@ -79,15 +79,17 @@ Tipos de projetos:
 
 ASP.NET Core:
  - RAZOR (sites)
-   - MVC
-   - Razor Pages
-   - Razor Library 
+   - MVC (Sustituto do web forms e aplica o padrão MVC)
+   - Razor Pages (Não aplica o padrão MVC, posui apenas uma página Razor, simples)
+   - Razor Library (Atende o MVC e o Razor Pages, permite a criação de uma pagina reutilizavel em vários projetos)
  - Services
-   - Web API
-   - SignalIR
- - SPA
+   - Web API (Padão MVC, sem a parte do Razor, implementa o padrão REST)
+   - SignalR (Específico para comunicação em tempo real, Chat, notificações...)
+ - SPA (Single Page Application serve de Template com integrações com os principais Frameworks)
    - Angular
    - React
+   - Blazor (Framework da microsoft)
+ - IDENTITY (Gerenciamento de usuários)
 
 
 
