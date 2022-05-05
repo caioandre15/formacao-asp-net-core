@@ -91,6 +91,36 @@ ASP.NET Core:
    - Blazor (Framework da microsoft)
  - IDENTITY (Gerenciamento de usuários)
 
+Minha primeira App VS:
+
+Caminho para criar um novo projeto:
+File>New Project>ASP.NET Core Web App>Local Pasta>Criar Projeto.
+
+Conhecendo a estrutura de um projeto:  
+
+- Arquivo .csproj    
+Editando o arquivo .csproj podemos verificar que é nele que fica localizado a versão utilizada do ASP.NET Core, configurações da utilização do docker e de autenticação e etc.
+Definição do aquivo .csproj no site [ficheiros.com.br](https://ficheiros.com.br/extensao/csproj/#:~:text=CSPROJ%3F%20(Projeto%20Visual%20Studio%20C%23,execut%C3%A1vel%20usando%20a%20plataforma%20MSBuild.):
+"C# (C Sharp) projeto de programação criado com o Microsoft Visual Studio; contém configurações de projeto e referências aos arquivos usados pelo projeto; salvo no formato MSBuild, que pode ser compilado em um programa executável usando a plataforma MSBuild."
+
+- Connectes Services  
+Importante ferramenta para adicionar serviços externos ao seu projeto. Ex: Monitoramento com o Application Insights do Azure. 
+Definição do site da [documentação da microsoft](https://docs.microsoft.com/en-us/visualstudio/azure/overview-connected-services?view=vs-2022)
+"Os Serviços Conectados são uma coleção de ferramentas no Visual Studio que ajudam você a conectar seu aplicativo ao seguinte: Serviços do Azure. Pontos de extremidade OpenAPI. Pontos de extremidade gRPC (Remote Procedure Call). Pontos de extremidade do Windows Communication Foundation (WCF)."
+
+- Dependencies  
+  - Analyzers (Para gestão de Performance e monitoramento do VS)
+  - Nuget (Pacotes instalados - Todas as features do ASP.NET Core estão nestes pacotes)
+  - Framework (Framework utilizado)
+  - SDK (SDK utilizado)
+ 
+- Properties
+Dentro desta pasta está localizado o arquivo lauchSettings.json. O principal objetivo deste aquivo é configurar como a aplicação será iniciada dentro do VS.
+
+
+
+
+
 
 
 
