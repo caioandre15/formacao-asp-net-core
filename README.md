@@ -100,7 +100,7 @@ Conhecendo a estrutura de um projeto:
 
 - Arquivo .csproj    
 Editando o arquivo .csproj podemos verificar que é nele que fica localizado a versão utilizada do ASP.NET Core, configurações da utilização do docker e de autenticação e etc.
-Definição do aquivo .csproj no [site](https://ficheiros.com.br/extensao/csproj/#:~:text=CSPROJ%3F%20(Projeto%20Visual%20Studio%20C%23,execut%C3%A1vel%20usando%20a%20plataforma%20MSBuild.) 
+Definição do aquivo .csproj
 "C# (C Sharp) projeto de programação criado com o Microsoft Visual Studio; contém configurações de projeto e referências aos arquivos usados pelo projeto; salvo no formato MSBuild, que pode ser compilado em um programa executável usando a plataforma MSBuild."
 
 - Connectes Services  
