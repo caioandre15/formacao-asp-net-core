@@ -71,6 +71,25 @@ Não é um problema ter várias versões do .NET Core instaladas em sua máquina
 }
 ````
 
+### Minha primeira APP ASP.NET Core
+
+O ASP.NET Core é uma tecnologia para web e fornece alguns tipo de templates, que tipos de formatos específicos de projetos web.
+
+Tipos de projetos:
+
+- ASP.NET Core
+ - RAZOR (sites)
+   - MVC
+   - Razor Pages
+   - Razor Library 
+ - Services
+   - Web API
+   - SignalIR
+ - SPA
+   - Angular
+   - React
+
+
 
 
 
