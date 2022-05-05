@@ -77,7 +77,7 @@ O ASP.NET Core é uma tecnologia para web e fornece alguns tipo de templates, qu
 
 Tipos de projetos:
 
-- ASP.NET Core
+ASP.NET Core:
  - RAZOR (sites)
    - MVC
    - Razor Pages
