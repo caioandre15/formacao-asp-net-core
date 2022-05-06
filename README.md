@@ -133,6 +133,19 @@ Possui a função de dizer como o sua aplicação irá funcionar. Conforme confi
 - Startup.cs
 Configuração de serviços e dependências.
 
+Criando minha primeira App no VS Code:
+- Abrir um prompt de comando.
+- Navegar para pasta
+- Comandos:
+````
+dotnet -h (Ajuda)
+dotnet new -h (Ajuda para o comando new)
+dotnet new -l (Listar Templates)
+dotnet new mvc -n [Nome do Projeto] (Criando um projeto mvc)
+code . (Para abrir o VSCode no repositório atual)
+````
+
+
 
 
 
