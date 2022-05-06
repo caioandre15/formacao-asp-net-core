@@ -119,8 +119,14 @@ A execução do IIS armazena as configurações em "iisSettings" extendendo para
 [Link](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/environments?view=aspnetcore-6.0) da documentação para entender mais sobre configuração de variaveis de ambiente.
 
 - wwwroot
-Possuí uma função especifica, armazenar os arquivos státicos do projeto. Arquivos Html, CSS, JS, icones, fontes e bibliotecas em geral. 
+Possuí uma função especifica, armazenar os arquivos státicos do projeto. Arquivos CSS, JS, icones, fontes e bibliotecas em geral. 
 Arquivos státicos, são arquivos que não são compilados. São de texto puro ou em binários no caso de imagens.
+
+- appsettings
+São aquivos de configuração de ambiente, onde podem conter tokens, connections strings e etc.
+
+
+
 
 
 
