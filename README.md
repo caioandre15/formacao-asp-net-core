@@ -118,6 +118,10 @@ Entre as configurações de applicationUrl, sslPort e etc, temos três tipos de 
 A execução do IIS armazena as configurações em "iisSettings" extendendo para as profiles que podem ser criados. Existe também a execução selfhosting "auto hospedando a aplicação" no comando Project, neste caso é necessário passar a url.
 [Link](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/environments?view=aspnetcore-6.0) da documentação para entender mais sobre configuração de variaveis de ambiente.
 
+- wwwroot
+Possuí uma função especifica, armazenar os arquivos státicos do projeto. Arquivos Html, CSS, JS, icones, fontes e bibliotecas em geral. 
+Arquivos státicos, são arquivos que não são compilados. São de texto puro ou em binários no caso de imagens.
+
 
 
 
