@@ -122,8 +122,20 @@ A execução do IIS armazena as configurações em "iisSettings" extendendo para
 Possuí uma função especifica, armazenar os arquivos státicos do projeto. Arquivos CSS, JS, icones, fontes e bibliotecas em geral. 
 Arquivos státicos, são arquivos que não são compilados. São de texto puro ou em binários no caso de imagens.
 
+- Controllers, Views e Models serão abordados no curso 02.
+
 - appsettings
 São aquivos de configuração de ambiente, onde podem conter tokens, connections strings e etc.
+
+- Program.cs
+Possui a função de dizer como o sua aplicação irá funcionar. Conforme configurado o comando Program para rodar a aplicação como selfhosting este comando nada mais é do que uma chamada para a classe Program que irá criar um host para que seja executada aplicação. Realizando a criação do host, compilação e execução a partir das configurações localizadas na classe startup.cs.
+
+- Startup.cs
+Configuração de serviços e dependências.
+
+
+
+
 
 
 
