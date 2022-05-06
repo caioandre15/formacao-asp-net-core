@@ -114,7 +114,7 @@ Definição do site da [documentação da microsoft](https://docs.microsoft.com/
  
 - Properties  
 Dentro desta pasta está localizado o arquivo lauchSettings.json. O principal objetivo deste aquivo é configurar como a aplicação será iniciada dentro do VS.
-Entre as configurações de applicationUrl, sslPort e etc, temos três tipos de ambientes "ASPNETCORE_ENVIRONMENT" que são: Development, Staged e Production, em cada ambiente o VS irá se comportar de uma forma diferente.
+Entre as configurações de applicationUrl, sslPort e etc, temos três tipos de ambientes "ASPNETCORE_ENVIRONMENT" que são: Development, Staged e Production, em cada ambiente o VS irá se comportar de uma forma diferente.  
 A execução do IIS armazena as configurações em "iisSettings" extendendo para as profiles que podem ser criados. Existe também a execução selfhosting "auto hospedando a aplicação" no comando Project, neste caso é necessário passar a url.
 
 
