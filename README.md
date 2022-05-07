@@ -145,7 +145,28 @@ dotnet new mvc -n [Nome do Projeto] (Criando um projeto mvc)
 code . (Para abrir o VSCode no repositório atual)
 dotnet run --launch-profile Prod (Para rodar com o perfil de PRD)
 dotnet add package automapper (Para instalar um pacote)
+dotnet list package (Para listar as depndências instaladas)
 ````
+
+### ASP.NET Core por baixo dos panos
+Pipeline do ASP.NET Core (Importante entender)
+OWIN - Open Web Interface for .NET - É uma especificamção de como separar o servidor da aplicação.
+
+No passado no Modelo ASP.NET MVC 5 ou anterior, havia o WEB HOST(IIS) dentro dele rodavam as aplicações ASP.NET.
+Para o Modelo do ASP.NET Core a ideia é a separação do WEB HOST(IIS) das aplicações ASP.NET.
+Agora além do próprio (IIS) temos:
+CustomHost: Possibilidade de criar seu próprio host.
+SelfHost: Possibilidade de hospedar o ASP.NET no seu próprio processo.
+
+WEB HOST(IIS) - OWIN - ASP.NET
+
+Middlewares:
+
+
+
+
+
+
 
 
 
