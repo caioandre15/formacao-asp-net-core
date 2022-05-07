@@ -143,6 +143,8 @@ dotnet new -h (Ajuda para o comando new)
 dotnet new -l (Listar Templates)
 dotnet new mvc -n [Nome do Projeto] (Criando um projeto mvc)
 code . (Para abrir o VSCode no repositório atual)
+dotnet run --launch-profile Prod (Para rodar com o perfil de PRD)
+dotnet add package automapper (Para instalar um pacote)
 ````
 
 
