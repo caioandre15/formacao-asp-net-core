@@ -150,7 +150,7 @@ dotnet list package (Para listar as depndências instaladas)
 
 ### ASP.NET Core por baixo dos panos
 Pipeline do ASP.NET Core (Importante entender)
-OWIN - Open Web Interface for .NET - É uma especificamção de como separar o servidor da aplicação.
+OWIN - Open Web Interface for .NET - É uma especificação de como separar o servidor da aplicação.
 
 No passado no Modelo ASP.NET MVC 5 ou anterior, havia o WEB HOST(IIS) dentro dele rodavam as aplicações ASP.NET.
 Para o Modelo do ASP.NET Core a ideia é a separação do WEB HOST(IIS) das aplicações ASP.NET.
@@ -160,7 +160,18 @@ SelfHost: Possibilidade de hospedar o ASP.NET no seu próprio processo.
 
 WEB HOST(IIS) - OWIN - ASP.NET
 
-Middlewares:
+O que é um Middlewares:
+
+Middlewares são componentes de software em uma aplicação ASP.NET Core. Estes componentes manipulam dados entre
+os requestes e responses.
+
+Um middleware possui uma responsabilidade única e pode trabalhar lado a lado com outros middlewares. Quando falamos
+do pipeline do ASP.NET Core estamos falando basicamente de Middlewares.
+
+Imagine um middleware como um processo em que você teria ação sendo disparada por uma request pelo usuário solicitando alguma coisa ao servidor, passa por este processo e gera um response, se este response for o final ele retorna ao user/cliente. Caso haja mais middleware no meio do caminho ele encaminha o request para o próximo middleware.
+
+Olhando por outro aspecto um middlware seria uma espécie de barramento, onde passa por um fluxo de processo e esses fluxos são encadeados. Então, entra um request que executa um middlware que ao terminar a execução chama o comando next(), este comando verifica se existe um próximo middlare, caso exista executa a sua lócgica. E assim, sucessivamento até chegar no último middlware. Depois existe o processamento na volta, porque um coisa é o tratamento da request e outra é o tratamento do response. Então existe tratamento na ida e na volta.
+
 
 
 
