@@ -173,7 +173,7 @@ Imagine um middleware como um processo em que você teria ação sendo disparada
 
 Olhando por outro aspecto um middlware seria uma espécie de barramento, onde passa por um fluxo de processo e esses fluxos são encadeados. Então, entra um request que executa um middlware que ao terminar a execução chama o comando next(), este comando verifica se existe um próximo middlare, caso exista executa a sua lócgica. E assim, sucessivamento até chegar no último middlware. Depois existe o processamento na volta, porque um coisa é o tratamento da request e outra é o tratamento do response. Então existe tratamento na ida e na volta.
 
-Interfaces que compoem o ASM.NET Core:
+Interfaces que compoem o ASP.NET Core:
 
 IConfiguration:
 Representa a raiz de uma hierarquia Microsoft.Extensions.Configuration.IConfiguration
@@ -195,6 +195,8 @@ Fornece informações sobre o ambiente de hospedagem Web em que uma aplicação 
 Classe Startup.cs e Middlewares
 
 Entendimento da classe Starup que não existe mais a partir do .Net 6.0 e criação de um middleware.
+
+A ordem que os middlewares são chamados é importante, inclusive se for adicionado o middleware Identity é necessário chama-lo antes do MVC.
 
 
 
