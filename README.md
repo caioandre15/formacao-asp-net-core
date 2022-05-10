@@ -5,8 +5,8 @@ Formação ASP.NET Core do site desenvolvedor.io ministrado por Eduardo Pires.
 No total são 4 cursos:
 
 - Iniciando com ASP.NET Core  
-- Dominando o ASP.NET MVC Core  
-- REST com ASP.NET Core com WebAPI  
+- REST com ASP.NET Core com WebAPI
+- Dominando o ASP.NET MVC Core    
 - ASP.NET Core Enterprise Applications  
 
 ## Curso 01 - Iniciando com ASP.NET Core - Resumo
@@ -197,6 +197,32 @@ Classe Startup.cs e Middlewares
 Entendimento da classe Starup que não existe mais a partir do .Net 6.0 e criação de um middleware.
 
 A ordem que os middlewares são chamados é importante, inclusive se for adicionado o middleware Identity é necessário chama-lo antes do MVC.
+
+### Recapitulando Curso 01:
+Entendemos que o ASP.NET Core é um framework aberto e customizável, saímos de um bloco monolítico (System.WEb) para uma plataforma aberta e flexível.
+O novo pipeline do ASP.NET Core é uma coleção de Middlewares trabalhando em conjunto no estilo "pay as you go" que significa que usaremos somente aquilo que
+for necessário e nada mais. 
+
+## Curso 02 - REST com ASP.NET Core com WebAPI - Resumo
+
+### Rest
+
+Protocolo Http:
+
+Modelo Cliente servidor.
+
+Para realizar uma request é necessário seguir um padrão de preenchimento, por exemplo:
+- Verbo Http (Get, Post, Put, Delete)
+- URI (Endpoint)
+- Versão do protocolo http
+- Request Header (Browser versão, autenticação)
+- Request Message (Informação para realizar a ação dados para cadastro, por exemplo)
+
+Para Response:
+- Response Code (200, 500, 404...)
+- Versão Http
+- Response Header (Cookie, token)
+- Response Message (Informação solicitada)
 
 
 
