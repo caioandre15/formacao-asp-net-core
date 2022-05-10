@@ -224,6 +224,13 @@ Para Response:
 - Response Header (Cookie, token)
 - Response Message (Informação solicitada)
 
+REST vc SOAP:
+
+REST - Representational State Transfer - um padrão apenas de texto que o torna bastante leve. Utiliza geralmente JSON.
+SOAP - Além dos dados no pacote Http é enviado o padrão SOAP que o deixa mais pesado. Utiliza o padrão XML.
+
+
+
 
 
 
