@@ -133,6 +133,88 @@ Possui a função de dizer como o sua aplicação irá funcionar. Conforme confi
 - Startup.cs
 Configuração de serviços e dependências.
 
+Criando minha primeira App no VS Code:
+- Abrir um prompt de comando.
+- Navegar para pasta
+- Comandos:
+````
+dotnet -h (Ajuda)
+dotnet new -h (Ajuda para o comando new)
+dotnet new -l (Listar Templates)
+dotnet new mvc -n [Nome do Projeto] (Criando um projeto mvc)
+code . (Para abrir o VSCode no repositório atual)
+dotnet run --launch-profile Prod (Para rodar com o perfil de PRD)
+dotnet watch run (Para que houver alteração no projeto a aplicação se "auto carregar")
+dotnet add package automapper (Para instalar um pacote)
+dotnet list package (Para listar as depndências instaladas)
+````
+
+### ASP.NET Core por baixo dos panos
+Pipeline do ASP.NET Core (Importante entender)
+OWIN - Open Web Interface for .NET - É uma especificação de como separar o servidor da aplicação.
+
+No passado no Modelo ASP.NET MVC 5 ou anterior, havia o WEB HOST(IIS) dentro dele rodavam as aplicações ASP.NET.
+Para o Modelo do ASP.NET Core a ideia é a separação do WEB HOST(IIS) das aplicações ASP.NET.
+Agora além do próprio (IIS) temos:
+CustomHost: Possibilidade de criar seu próprio host.
+SelfHost: Possibilidade de hospedar o ASP.NET no seu próprio processo.
+
+WEB HOST(IIS) - OWIN - ASP.NET
+
+O que é um Middlewares:
+
+Middlewares são componentes de software em uma aplicação ASP.NET Core. Estes componentes manipulam dados entre
+os requestes e responses.
+
+Um middleware possui uma responsabilidade única e pode trabalhar lado a lado com outros middlewares. Quando falamos
+do pipeline do ASP.NET Core estamos falando basicamente de Middlewares.
+
+Imagine um middleware como um processo em que você teria ação sendo disparada por uma request pelo usuário solicitando alguma coisa ao servidor, passa por este processo e gera um response, se este response for o final ele retorna ao user/cliente. Caso haja mais middleware no meio do caminho ele encaminha o request para o próximo middleware.
+
+Olhando por outro aspecto um middlware seria uma espécie de barramento, onde passa por um fluxo de processo e esses fluxos são encadeados. Então, entra um request que executa um middlware que ao terminar a execução chama o comando next(), este comando verifica se existe um próximo middlare, caso exista executa a sua lócgica. E assim, sucessivamento até chegar no último middlware. Depois existe o processamento na volta, porque um coisa é o tratamento da request e outra é o tratamento do response. Então existe tratamento na ida e na volta.
+
+Interfaces que compoem o ASP.NET Core:
+
+IConfiguration:
+Representa a raiz de uma hierarquia Microsoft.Extensions.Configuration.IConfiguration
+Responsável por gerenciar as constraints do ASP.NET Core, obtem as informações pela chaves no arquivo appsettings, um exemplo seria uma connection string.
+
+IServiceCollection:
+Representa um contrato para uma coleção de serviços. 
+Essa interface é estendida por classes que implementam middlewares através do recurso de injenção de dependência.
+Então, o IServiceCollection serve para expor um contrato com uma coleção de serviços e são utilizados estes serviços para adicionar os 
+middlewares dentro do ConfigureServices da sua classe Startup.cs.
+
+IApplicationBuilder
+Representa um contraro para classes que irão prover mecanismos de configuração de um Middleware. Essa interface
+é estendida por classes que implementam métodos de configuração para cada Middleware. Utilizada para configurar os middlewares da sua aplicação.
+
+IHosting Environment
+Fornece informações sobre o ambiente de hospedagem Web em que uma aplicação está sendo executada.
+
+Classe Startup.cs e Middlewares
+
+Entendimento da classe Starup que não existe mais a partir do .Net 6.0 e criação de um middleware.
+
+A ordem que os middlewares são chamados é importante, inclusive se for adicionado o middleware Identity é necessário chama-lo antes do MVC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
