@@ -238,7 +238,181 @@ em conjunto em um mesmo sitema diistribuido, pois cada uma entrega sua funcional
 Arquitetura REST em Microservices:  
 Nada mais é do que uma Arquitetura REST, só que cada API tem uma funcionalidade bem definida e compacta.
 
-### Criando uma aplicação:
+### Criando uma aplicação Web API:
+
+Criação do Proketo no VS Code:  
+
+Lstagem de templates:
+````
+dotnet new --list
+````
+Nome do template utilizado é o "webapi"
+````
+dotnet new webapi -h
+````
+Criação do projeto:
+````
+dotnet new webapi -n [Nome da API]
+cd [Path do diretório da API]
+code . (Abre o VS Code direto na pasta criada para o projeto)
+````
+
+Criação do Proketo no VS:
+
+Na primeira tela clicar em "Create a new project";
+Pesquisar por API na barra de busca;
+Selecionar ASP.NET Core Web API;
+Selecionar a versão do framework;
+Authentication, selecionar none;
+Deixar marcado o check HTTPS e desmarcado para Docker;
+Deixar marcardo Use Controllers e Enable OpenAPI support;
+
+Explicações:
+Authentication Type - None, pois iremos adicionar manualmente.
+Configure for HTTPS - Para gerar com suporte a SSL.
+Enable Docker - Não precisaremos neste momento.
+Use Controllers - Não utilizaremos Minimal API (conheça mais sobre minimal API's [neste vídeo](https://www.youtube.com/watch?v=aXayqUfSNvw)).
+Enable OpenAPI support - Para ativar suporte ao Swagger (documentação REST).
+
+Mudanças na WebAPI no ASP.NET 6:
+
+Por uma questão de compatibilização com o padrão de código escrito em C# até o momento é recomendável desativar o suporte a validação de Nullable Types do CSPROJ (clique 2x no projeto para abrir);
+
+É importante remover esta chave em todos os projetos que forem criados caso não queira tratar cada propriedade do seu código como Nullable;
+
+````
+<Nullable>enable</Nullable>
+````
+
+A maior mudança é a saída da classe Startup.cs da estrutura do projerto, toda sua responsabilidade foi levada para a classe Program.cs.
+Explicações:
+````
+// O builder é responsável por fornecer os métodos de controle
+// dos serviços e demais funcionalidades na configuração da App
+var builder = WebApplication.CreateBuilder(args);
+
+// Daqui para baixo é conteúdo que vinha dentro do método  ConfigureServices() na antiga Startup.cs
+// Nesta area adicionamos serviços ao pipeline
+
+// Essa é a nova forma atual de adicionar suporte a API
+builder.Services.AddControllers();
+
+// Adicionando suporte de geradores de metadados (para documentação)
+builder.Services.AddEndpointsApiExplorer();
+
+// Adicionando suporte a documentação OpenAPI
+builder.Services.AddSwaggerGen();
+
+// Essa linha precisa sempre ficar por último na configuração dos serviços
+var app = builder.Build();
+
+// Daqui para baixo é conteúdo que vinha dentro do método Configure() na antiga Startup.cs
+// Aqui se configura comportamentos do request dentro do pipeline
+if (app.Environment.IsDevelopment())
+{
+    // Chamando o uso do Swagger quando for modo desenvolvimento
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+// Força o redirecionamento HTTPS
+app.UseHttpsRedirection();
+
+// Implementa o uso de validação de autorização
+app.UseAuthorization();
+
+// Mapeia todas as controllers para criar uma coleção de rotas
+app.MapControllers();
+
+// Essa linha precisa sempre ficar por último na configuração do request pipeline
+app.Run();
+````
+Mudanças na controller:
+````
+using Microsoft.AspNetCore.Mvc;
+
+namespace MinhaAPI.Controllers
+{
+    // Para uma controller responder como API precisa ter esse atributo
+    [ApiController]
+    
+    // Rota - No caso de uso de [controller] a rota será o nome da controller ex:
+    // https://localhost:5001/WeatherForecast
+    [Route("[controller]")]
+    public class WeatherForecastController : ControllerBase // <<< Repare na Herança da controller base, é uma classe controller mais simples do que a do MVC    
+    {
+        private static readonly string[] Summaries = new[]
+        {
+          "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
+
+        // Declaração do Logger do ASPNET
+        private readonly ILogger<WeatherForecastController> _logger;
+        
+        // DI do logger 
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        {
+            _logger = logger;
+        }
+
+        // Action (verbo GET)
+        // Irá retornar uma coleção (fake) de previsão do tempo
+        // GET - https://localhost:5001/WeatherForecast/
+        [HttpGet(Name = "GetWeatherForecast")]
+        public IEnumerable<WeatherForecast> Get()
+        {
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            })
+            .ToArray();
+        }
+    }
+}
+````
+O arquivo launchSettings.json já vem preparado para HTTP e HTTPS assim como rodar o projeto via IISExpress ou Kestrel:
+````
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {                                  // Configuracoes do IIS (apenas VS 2022)
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:48782",
+      "sslPort": 44373
+    }
+  },
+  "profiles": { 
+    "MinhaAPI": {                                   // Perfil para rodar via Kestrel
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7222;http://localhost:5222",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS Express": {                                 // Perfil para rodar via IISExpress
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
+````
+
+
+
+
+
+
+
 
 
 
