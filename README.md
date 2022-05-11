@@ -407,6 +407,38 @@ O arquivo launchSettings.json já vem preparado para HTTP e HTTPS assim como rod
 }
 ````
 
+## Controllers
+
+Herda da ControllerBase que é mais leve do que a Controller utilizada o MVC.
+Mas apenas a ControllerBase não é suficiente, é necessário a Implementação da ApiController também.
+
+Rotas:
+
+````
+Route("api/[controller]")]
+    [ApiController]
+    public class ValuesController : ControllerBase {}
+````
+
+Acima é importante destacar que a rota recebe o atributo [controler] que por sua vez recebe o nome da controler. No exemplo acima "values", poir o método o nome
+do método corresponde a ValuesController ou seja o valor vem do que está antes de Controller no método Values/Controler.
+
+O verbos podem especid=ficar um template de rota ex:
+````
+[HtttpGet("{id}")]
+````
+
+Neste caso não sendo necessário declarar o atributo Rote, este atributo fica mais sendo mais utilizado na controller para o prefixo.
+
+É importante especificar o tipo de dado que está recebendo no Get ex:
+````
+[HtttpGet("{id}:int")]
+````
+
+
+
+
+
 
 
 
