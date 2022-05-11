@@ -203,51 +203,42 @@ Entendemos que o ASP.NET Core é um framework aberto e customizável, saímos de
 O novo pipeline do ASP.NET Core é uma coleção de Middlewares trabalhando em conjunto no estilo "pay as you go" que significa que usaremos somente aquilo que
 for necessário e nada mais. 
 
-## Curso 02 - REST com ASP.NET Core com WebAPI - Resumo
+## Curso 02 - REST com ASP.NET Core com WebAPI - Resumo  
 
-### Rest
+### Rest  
 
-Protocolo Http:
+Protocolo Http:  
 
-Modelo Cliente servidor.
+Modelo Cliente servidor.  
 
-Para realizar uma request é necessário seguir um padrão de preenchimento, por exemplo:
-- Verbo Http (Get, Post, Put, Delete)
-- URI (Endpoint)
-- Versão do protocolo http
-- Request Header (Browser versão, autenticação)
-- Request Message (Informação para realizar a ação dados para cadastro, por exemplo)
+Para realizar uma request é necessário seguir um padrão de preenchimento, por exemplo:  
+- Verbo Http (Get, Post, Put, Delete)  
+- URI (Endpoint)  
+- Versão do protocolo http  
+- Request Header (Browser versão, autenticação)  
+- Request Message (Informação para realizar a ação dados para cadastro, por exemplo)  
 
-Para Response:
-- Response Code (200, 500, 404...)
-- Versão Http
-- Response Header (Cookie, token)
-- Response Message (Informação solicitada)
+Para Response:  
+- Response Code (200, 500, 404...)  
+- Versão Http  
+- Response Header (Cookie, token)  
+- Response Message (Informação solicitada)  
 
-REST vc SOAP:
+REST vc SOAP:  
 
 REST - Representational State Transfer - um padrão apenas de texto que o torna bastante leve. Utiliza geralmente JSON.
 SOAP - Além dos dados no pacote Http é enviado o padrão SOAP que o deixa mais pesado. Utiliza o padrão XML.
 
+Arquitetura Rest:  
+Nada mais é do que criar um nível de abstração ente as API's.
+Programação distribuída o todo funcionando em pedaços.
+Uma vez que temos n API's podendo serrm escritas em diferentes linguagens mas respeitando os o modelo REST é possível que todas trabalhem
+em conjunto em um mesmo sitema diistribuido, pois cada uma entrega sua funcionalidade seguindo o mesmo padrão.
 
+Arquitetura REST em Microservices:  
+Nada mais é do que uma Arquitetura REST, só que cada API tem uma funcionalidade bem definida e compacta.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Criando uma aplicação:
 
 
 
