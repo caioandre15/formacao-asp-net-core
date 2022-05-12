@@ -420,7 +420,7 @@ Route("api/[controller]")]
     public class ValuesController : ControllerBase {}
 ````
 
-Acima é importante destacar que a rota recebe o atributo [controler] que por sua vez recebe o nome da controler. No exemplo acima "values", poir o método o nome
+Acima é importante destacar que a rota recebe o atributo [controller] que por sua vez recebe o nome da controler. No exemplo acima "values", pois o nome
 do método corresponde a ValuesController ou seja o valor vem do que está antes de Controller no método Values/Controler.
 
 O verbos podem especid=ficar um template de rota ex:
@@ -434,6 +434,8 @@ Neste caso não sendo necessário declarar o atributo Rote, este atributo fica m
 ````
 [HtttpGet("{id}:int")]
 ````
+
+
 
 
 
