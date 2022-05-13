@@ -472,7 +472,43 @@ CreatedAtAction("Post", product) // Retorna sucesso de criação status code 201
 
 Formatadores de dados de resposta personalizados:
 
-Para realizar o retorno de sucesso ou de erro podemos criar uma classe abstrata que herde da ControllerBase e customize os retornos realizando uma validação antes de enviar o retorno. 
+Para realizar o retorno (ex. de sucesso ou de erro) podemos criar uma classe abstrata que herde da ControllerBase e customize os retornos realizando uma validação antes de envia-lo. É necessário alterar a herança da classe ControllerBase da Controller para a MainController criada para aplicar a customização.
+
+````
+[ApiController]
+    public abstract class MainController : ControllerBase
+    {
+        protected ActionResult CustomResponse(object result = null)
+        {
+            if (OperacaoValida())
+            {
+                return Ok(new
+                {
+                    sucess = true,
+                    data = result
+                });
+            }
+
+            return BadRequest(new
+            {
+                sucess = false,
+                errors = ObterErros()
+            });
+        }
+
+        public bool OperacaoValida()
+        {
+            //Minhas validações
+            return true;
+        }
+
+        public string ObterErros()
+        {
+            //Minhas validações
+            return "";
+        }
+    }
+````
 
 
 
