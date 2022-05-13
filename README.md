@@ -446,6 +446,16 @@ public ActionResult<IEnumerable<string>> Get()
  return Ok()
 }
 ````
+Modificadores do método:
+
+[FromBody] especifica que a informação estará sendo buscada no body da requisição.
+[FromRoute] especifica que o valor está vindo da url da requisição. Não sendo mais utilizado, uma vez que na rota já está especificado que a rota recebe um valor 
+e possuí a mesmo nome da variável na rota e no parâmetro.
+````
+[HttpPut("{id}")]
+public void Put([FromRoute] int id, [FromBody] string value) // Com [FromRoute]
+public void Put(int id, [FromBody] string value) // Sem [FromRoute]
+````
 
 
 
