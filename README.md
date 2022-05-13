@@ -528,6 +528,12 @@ Para utilizar as convenções basta adicionar a linha abaixo de acordo com o ver
 [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Post))]
 ````
 
+Também pode ser inserido de forma mais genérica na classe Product.cs ou na antiga Startup.cs.
+
+````
+[assembly: ApiConventionMethod(typeof(DefaultApiConventions))]
+````
+
 
 
 
