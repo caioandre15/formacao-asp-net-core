@@ -470,6 +470,11 @@ BadRequest() // Retorna erro status code 500.
 Ok() // Retorna Sucesso status code 200.  
 CreatedAtAction("Post", product) // Retorna sucesso de criação status code 201  
 
+Formatadores de dados de resposta personalizados:
+
+Para realizar o retorno de sucesso ou de erro podemos criar uma classe abstrata que herde da ControllerBase e customize os retornos realizando uma validação antes de enviar o retorno. 
+
+
 
 
 
