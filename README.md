@@ -435,6 +435,20 @@ Neste caso não sendo necessário declarar o atributo Rote, este atributo fica m
 [HtttpGet("{id}:int")]
 ````
 
+Action Results e Formatadores de Respostas
+
+Action Result é o resultado para uma ação. Em um método de uma API em que o retorno é um Action Result é possível retornar um bad request ou um status code 200 por exemplo, agora se não utilizarmos e retornarmos um tipo de variavel, por exemplo não consiguiremos retornar esses status codes.
+
+Ex. de Action Results:
+````
+public ActionResult<IEnumerable<string>> Get()
+{
+ return Ok()
+}
+````
+
+
+
 
 
 
