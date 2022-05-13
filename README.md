@@ -466,10 +466,13 @@ Importante preencher os tipos de retornos que a API possui para efeito de docume
 [ProducesResponseType(StatusCodes.Status400BadRequest)]  
 
 Metódos reult aprendidos:  
+````
 BadRequest() // Retorna erro status code 500.  
 Ok() // Retorna Sucesso status code 200.  
 CreatedAtAction("Post", product) // Retorna sucesso de criação status code 201  
-
+NotFound() // Página não encontrada status code 404
+NoContent() // Sucesso 204
+````
 Formatadores de dados de resposta personalizados:
 
 Para realizar o retorno (ex. de sucesso ou de erro) podemos criar uma classe abstrata que herde da ControllerBase e customize os retornos realizando uma validação antes de envia-lo. É necessário alterar a herança da classe ControllerBase da Controller para a MainController criada para aplicar a customização.
@@ -508,6 +511,24 @@ Para realizar o retorno (ex. de sucesso ou de erro) podemos criar uma classe abs
         }
     }
 ````
+
+Analisadores e Convenções:
+
+Para utilizar o analisador precisamos instalar o pacote abaixo em Package Manager Console execute o comando abaixo.
+O analisador é importante para analisar os results enviados e adicionar os ProducesResponsesType que estiverem faltando, por exemplo. Isso será interassante
+para a documentação da API.
+
+````
+Install-Package Microsoft.AspNetCore.Mvc.Api.Analyzers
+````
+
+Para utilizar as convenções basta adicionar a linha abaixo de acordo com o verbo http adequado. Utilizando as convenções não é necessário adicionar os ProducesResponsesType.
+
+````
+[ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Post))]
+````
+
+
 
 
 
