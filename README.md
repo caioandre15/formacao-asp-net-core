@@ -449,6 +449,7 @@ public ActionResult<IEnumerable<string>> Get()
 Modificadores do método:
 
 [FromBody] especifica que a informação estará sendo buscada no body da requisição.
+Obs: [FromBody] Não é necessário especificar se o tipo do dado que irá receber a informação dor complexo. Ex. Produto.
 [FromRoute] especifica que o valor está vindo da url da requisição. Não sendo mais utilizado, uma vez que na rota já está especificado que a rota recebe um valor 
 e possuí a mesmo nome da variável na rota e no parâmetro.
 ````
@@ -456,6 +457,12 @@ e possuí a mesmo nome da variável na rota e no parâmetro.
 public void Put([FromRoute] int id, [FromBody] string value) // Com [FromRoute]
 public void Put(int id, [FromBody] string value) // Sem [FromRoute]
 ````
+[FromForm] especifica que a informação está vindo de um formulário. Content-Type Form-Data.
+[FromQuery] especifica que a informação virá dos Query Parameters.
+[FromService] especifica interface ou uma classe que irá fazer uma resolução via injeção de dependência.
+
+
+
 
 
 
