@@ -461,6 +461,15 @@ public void Put(int id, [FromBody] string value) // Sem [FromRoute]
 [FromQuery] especifica que a informação virá dos Query Parameters.
 [FromService] especifica interface ou uma classe que irá fazer uma resolução via injeção de dependência.
 
+Importante preencher os tipos de retornos que a API possui para efeito de documentação.
+[ProducesResponseType(typeof(Product), StatusCodes.Status201Created)]
+[ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+Metódos reult aprendidos:
+BadRequest() // Retorna erro status code 500.
+Ok() // Retorna Sucesso status code 200.
+CreatedAtAction("Post", product) // Retorna sucesso de criação status code 201 
+
 
 
 
