@@ -504,7 +504,6 @@ Para realizar o retorno (ex. de sucesso ou de erro) podemos criar uma classe abs
 
         public string ObterErros()
         {
-            //Minhas validações
             return "";
         }
     }
