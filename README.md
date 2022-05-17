@@ -540,6 +540,18 @@ Processo rápido - CRUD:
 
 Primeiro foi criado a model Fornecedor mapeando os campos com tamanho e mensagens de erro. Depois foi adicionada a classe ApiDbContex, para realizar a conexão com o banco. Depois foi gerada as migrations e depois criado o banco de dados e suas tabelas.
 
+Adicionando ApiDbContext na classe Startup.cs
+````
+services.AddDbContext<ApiDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+````
+
+Adicionando ConnectionString no arquivo appsettings:
+````
+"ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=MinhaApiCore;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+````
 Comandos Executados no Packege Manager Console:
 ````
 Add-Migration Initial // Cria Migrations
