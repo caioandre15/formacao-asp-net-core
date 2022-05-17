@@ -538,7 +538,12 @@ Também pode ser inserido de forma mais genérica na classe Product.cs ou na ant
 
 Processo rápido - CRUD:
 
-Primeiro foi criado a model Fornecedor mapeando os campos com tamanho e mensagens de erro. Depois foi adicionada a classe ApiDbContex, para realizar a conexão com o banco. Depois foi gerada as migrations e depois criado o banco de dados e suas tabelas.
+Primeiro foram adicionados os Nugets Packs. (EntityFrameworkCore, EntityFrameworkCore.Relative e EntityFrameworkCore.SqlServer) 
+Adicionada a model Fornecedor mapeando os campos com tamanho e mensagens de erro;  
+Adicionada a classe ApiDbContex, para realizar a conexão com o banco;  
+Adicionado DbContext na classe Startup.cs;    
+Adicionado a conection string no arquivo appsettings;  
+Gerada as migrations e depois criado o banco de dados e suas tabelas;  
 
 Adicionando ApiDbContext na classe Startup.cs
 ````
