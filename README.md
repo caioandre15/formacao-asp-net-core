@@ -534,6 +534,17 @@ Também pode ser inserido de forma mais genérica na classe Product.cs ou na ant
 [assembly: ApiConventionMethod(typeof(DefaultApiConventions))]
 ````
 
+### Criando minha primeira API REST:
+
+Processo rápido - CRUD:
+
+Primeiro foi criado a model Fornecedor mapeando os campos com tamanho e mensagens de erro. Depois foi adicionada a classe ApiDbContex, para realizar a conexão com o banco. Depois foi gerada as migrations e depois criado o banco de dados e suas tabelas.
+
+Comandos Executados no Packege Manager Console:
+````
+Add-Migration Initial // Cria Migrations
+update-database // Cria o banco e as tabelas
+````
 
 
 
