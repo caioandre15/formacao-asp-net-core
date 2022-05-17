@@ -407,6 +407,175 @@ O arquivo launchSettings.json já vem preparado para HTTP e HTTPS assim como rod
 }
 ````
 
+## Controllers
+
+Herda da ControllerBase que é mais leve do que a Controller utilizada o MVC.
+Mas apenas a ControllerBase não é suficiente, é necessário a Implementação da ApiController também.
+
+Rotas:
+
+````
+Route("api/[controller]")]
+    [ApiController]
+    public class ValuesController : ControllerBase {}
+````
+
+Acima é importante destacar que a rota recebe o atributo [controller] que por sua vez recebe o nome da controler. No exemplo acima "values", pois o nome
+do método corresponde a ValuesController ou seja o valor vem do que está antes de Controller no método Values/Controler.
+
+O verbos podem especid=ficar um template de rota ex:
+````
+[HtttpGet("{id}")]
+````
+
+Neste caso não sendo necessário declarar o atributo Rote, este atributo fica mais sendo mais utilizado na controller para o prefixo.
+
+É importante especificar o tipo de dado que está recebendo no Get ex:
+````
+[HtttpGet("{id}:int")]
+````
+
+Action Results e Formatadores de Respostas
+
+Action Result é o resultado para uma ação. Em um método de uma API em que o retorno é um Action Result é possível retornar um bad request ou um status code 200 por exemplo, agora se não utilizarmos e retornarmos um tipo de variavel, por exemplo não consiguiremos retornar esses status codes.
+
+Ex. de Action Results:
+````
+public ActionResult<IEnumerable<string>> Get()
+{
+ return Ok()
+}
+````
+Modificadores do método:
+
+[FromBody] especifica que a informação estará sendo buscada no body da requisição.
+Obs: [FromBody] Não é necessário especificar se o tipo do dado que irá receber a informação dor complexo. Ex. Produto.
+[FromRoute] especifica que o valor está vindo da url da requisição. Não sendo mais utilizado, uma vez que na rota já está especificado que a rota recebe um valor 
+e possuí a mesmo nome da variável na rota e no parâmetro.
+````
+[HttpPut("{id}")]
+public void Put([FromRoute] int id, [FromBody] string value) // Com [FromRoute]
+public void Put(int id, [FromBody] string value) // Sem [FromRoute]
+````
+[FromForm] especifica que a informação está vindo de um formulário. Content-Type Form-Data.  
+[FromQuery] especifica que a informação virá dos Query Parameters.  
+[FromService] especifica interface ou uma classe que irá fazer uma resolução via injeção de dependência.  
+
+Importante preencher os tipos de retornos que a API possui para efeito de documentação.  
+[ProducesResponseType(typeof(Product), StatusCodes.Status201Created)]  
+[ProducesResponseType(StatusCodes.Status400BadRequest)]  
+
+Metódos reult aprendidos:  
+````
+BadRequest() // Retorna erro status code 500.  
+Ok() // Retorna Sucesso status code 200.  
+CreatedAtAction("Post", product) // Retorna sucesso de criação status code 201  
+NotFound() // Página não encontrada status code 404
+NoContent() // Sucesso 204
+````
+Formatadores de dados de resposta personalizados:
+
+Para realizar o retorno (ex. de sucesso ou de erro) podemos criar uma classe abstrata que herde da ControllerBase e customize os retornos realizando uma validação antes de envia-lo. É necessário alterar a herança da classe ControllerBase da Controller para a MainController criada para aplicar a customização.
+
+````
+[ApiController]
+    public abstract class MainController : ControllerBase
+    {
+        protected ActionResult CustomResponse(object result = null)
+        {
+            if (OperacaoValida())
+            {
+                return Ok(new
+                {
+                    sucess = true,
+                    data = result
+                });
+            }
+
+            return BadRequest(new
+            {
+                sucess = false,
+                errors = ObterErros()
+            });
+        }
+
+        public bool OperacaoValida()
+        {
+            //Minhas validações
+            return true;
+        }
+
+        public string ObterErros()
+        {
+            return "";
+        }
+    }
+````
+
+Analisadores e Convenções:
+
+Para utilizar o analisador precisamos instalar o pacote abaixo em Package Manager Console execute o comando abaixo.
+O analisador é importante para analisar os results enviados e adicionar os ProducesResponsesType que estiverem faltando, por exemplo. Isso será interassante
+para a documentação da API.
+
+````
+Install-Package Microsoft.AspNetCore.Mvc.Api.Analyzers
+````
+
+Para utilizar as convenções basta adicionar a linha abaixo de acordo com o verbo http adequado. Utilizando as convenções não é necessário adicionar os ProducesResponsesType.
+
+````
+[ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Post))]
+````
+
+Também pode ser inserido de forma mais genérica na classe Product.cs ou na antiga Startup.cs.
+
+````
+[assembly: ApiConventionMethod(typeof(DefaultApiConventions))]
+````
+
+### Criando minha primeira API REST:
+
+Processo rápido - CRUD:
+
+Primeiro foram adicionados os Nugets Packs. (EntityFrameworkCore, EntityFrameworkCore.Relative e EntityFrameworkCore.SqlServer) 
+Adicionada a model Fornecedor mapeando os campos com tamanho e mensagens de erro;  
+Adicionada a classe ApiDbContex, para realizar a conexão com o banco;  
+Adicionado DbContext na classe Startup.cs;    
+Adicionado a conection string no arquivo appsettings;  
+Gerada as migrations e depois criado o banco de dados e suas tabelas;  
+
+Adicionando ApiDbContext na classe Startup.cs
+````
+services.AddDbContext<ApiDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+````
+
+Adicionando ConnectionString no arquivo appsettings:
+````
+"ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=MinhaApiCore;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+````
+Comandos Executados no Packege Manager Console:
+````
+Add-Migration Initial // Cria Migrations
+update-database // Cria o banco e as tabelas
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
