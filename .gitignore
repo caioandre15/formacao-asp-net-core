@@ -348,3 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/curso-02-rest-com-asp-net-core-web-api/MinhaAPICore
