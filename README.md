@@ -578,7 +578,7 @@ Entendimento da controller criada:
 - Na pasta src ficará toda a parte de negócio e deverá ser adicionado os projetos Business e Data;  
 - Criar um novo projeto ASP.NET Core Web Application;  
 - Adicionar em dependências da API a referência aos projetos Business e Data;  
-- 
+- Definir a API como Startup Project;  
 
 
 
