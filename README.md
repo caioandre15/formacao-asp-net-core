@@ -101,7 +101,7 @@ Conhecendo a estrutura de um projeto:
 - Arquivo .csproj      
 Editando o arquivo .csproj podemos verificar que é nele que fica localizado a versão utilizada do ASP.NET Core, configurações da utilização do docker e de autenticação e etc. Definição do aquivo .csproj "C# (C Sharp) projeto de programação criado com o Microsoft Visual Studio; contém configurações de projeto e referências aos arquivos usados pelo projeto; salvo no formato MSBuild, que pode ser compilado em um programa executável usando a plataforma MSBuild."
 
-- Connectes Services  
+- Connect Services  
 Importante ferramenta para adicionar serviços externos ao seu projeto. Ex: Monitoramento com o Application Insights do Azure. 
 Definição do site da [documentação da microsoft](https://docs.microsoft.com/en-us/visualstudio/azure/overview-connected-services?view=vs-2022)
 "Os Serviços Conectados são uma coleção de ferramentas no Visual Studio que ajudam você a conectar seu aplicativo ao seguinte: Serviços do Azure. Pontos de extremidade OpenAPI. Pontos de extremidade gRPC (Remote Procedure Call). Pontos de extremidade do Windows Communication Foundation (WCF)."
@@ -224,7 +224,7 @@ Para Response:
 - Response Header (Cookie, token)  
 - Response Message (Informação solicitada)  
 
-REST vc SOAP:  
+REST vs. SOAP:  
 
 REST - Representational State Transfer - um padrão apenas de texto que o torna bastante leve. Utiliza geralmente JSON.
 SOAP - Além dos dados no pacote Http é enviado o padrão SOAP que o deixa mais pesado. Utiliza o padrão XML.
@@ -240,7 +240,7 @@ Nada mais é do que uma Arquitetura REST, só que cada API tem uma funcionalidad
 
 ### Criando uma aplicação Web API:
 
-Criação do Proketo no VS Code:  
+Criação do Projeto no VS Code:  
 
 Lstagem de templates:
 ````
@@ -257,7 +257,7 @@ cd [Path do diretório da API]
 code . (Abre o VS Code direto na pasta criada para o projeto)
 ````
 
-Criação do Proketo no VS:
+Criação do Projeto no VS:
 
 Na primeira tela clicar em "Create a new project";
 Pesquisar por API na barra de busca;
