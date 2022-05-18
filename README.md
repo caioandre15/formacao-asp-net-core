@@ -538,12 +538,14 @@ Também pode ser inserido de forma mais genérica na classe Product.cs ou na ant
 
 Processo rápido - CRUD:
 
-Primeiro foram adicionados os Nugets Packs. (EntityFrameworkCore, EntityFrameworkCore.Relative e EntityFrameworkCore.SqlServer) 
+Primeiro foram adicionados os Nugets Packs. (EntityFrameworkCore, EntityFrameworkCore.Relative e EntityFrameworkCore.SqlServer)  
 Adicionada a model Fornecedor mapeando os campos com tamanho e mensagens de erro;  
 Adicionada a classe ApiDbContex, para realizar a conexão com o banco;  
 Adicionado DbContext na classe Startup.cs;    
 Adicionado a conection string no arquivo appsettings;  
 Gerada as migrations e depois criado o banco de dados e suas tabelas;  
+Criado uma nova controller através do scaffold;  
+
 
 Adicionando ApiDbContext na classe Startup.cs
 ````
@@ -562,6 +564,14 @@ Comandos Executados no Packege Manager Console:
 Add-Migration Initial // Cria Migrations
 update-database // Cria o banco e as tabelas
 ````
+
+Entendimento da controller criada:
+
+- É injeta um DbContext através de um construtor;  
+- Métodos asincronos precisam retornar uma Task<>;  
+- Foi criado um CRUD atraves do Scaffold;  
+
+
 
 
 
