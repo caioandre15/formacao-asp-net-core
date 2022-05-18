@@ -567,7 +567,7 @@ update-database // Cria o banco e as tabelas
 
 Entendimento da controller criada:
 
-- É injeta um DbContext através de um construtor;  
+- Foi injetado um DbContext através de um construtor;  
 - Métodos asincronos precisam retornar uma Task<>;  
 - Foi criado um CRUD atraves do Scaffold;  
 
