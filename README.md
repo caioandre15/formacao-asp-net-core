@@ -571,6 +571,14 @@ Entendimento da controller criada:
 - Métodos asincronos precisam retornar uma Task<>;  
 - Foi criado um CRUD atraves do Scaffold;  
 
+### Setup API Completa
+
+- Criar uma solution em branco (Selecionar Other em projects);  
+- Criando pastas de estrutura do projeto (src, sql, tests);  
+- Na pasta src ficará toda a parte de negócio e deverá ser adicionado os projetos Business e Data;  
+- Criar um novo projeto ASP.NET Core Web Application;  
+- Adicionar em dependências da API a referência aos projetos Business e Data;  
+- 
 
 
 
