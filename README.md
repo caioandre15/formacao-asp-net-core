@@ -580,37 +580,10 @@ Entendimento da controller criada:
 - Adicionar em dependências da API a referência aos projetos Business e Data;  
 - Definir a API como Startup Project;  
 
+Implementando DTO's:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+O projeto está dividido em camadas, a camada de negócio possuí models que não podem ficar expostos. Para isso não ocorrer são criados 
+os DTO's ou View Models para ficarem expostos respeitando as regras de negócios da aplicação.
 
 
 
