@@ -605,6 +605,25 @@ Comando para instalar o AutoMapper
 install-package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 6.1
 ````
 
+Adicionar o serviço do Automapper na classe Startup:
+````
+services.AddAutoMapper(typeof(Startup));
+````
+
+Criar uma pasta chamada Configutaion e adiconar uma classe chamada AutomapperConfig. Esta classe deve herdar de Profile e servirá para fazer o de para entre os 
+DTO's e as models do banco de dados.
+
+Devemos injetar o IMapper na controller e realizar utilizar o comando Map<> para mapear o retorno correto.
+Devemos adicionar o contexto na classe Startup e adicionar a ConnectionString no arquivo appsettings.
+
+Criar o banco:
+````
+update-database -verbose
+````
+
+
+
+
 
 
 
