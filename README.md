@@ -571,7 +571,7 @@ Entendimento da controller criada:
 - Métodos asincronos precisam retornar uma Task<>;  
 - Foi criado um CRUD atraves do Scaffold;  
 
-### Setup API Completa
+Setup API Completa
 
 - Criar uma solution em branco (Selecionar Other em projects);  
 - Criando pastas de estrutura do projeto (src, sql, tests);  
@@ -582,8 +582,29 @@ Entendimento da controller criada:
 
 Implementando DTO's:
 
-O projeto está dividido em camadas, a camada de negócio possuí models que não podem ficar expostos. Para isso não ocorrer são criados 
-os DTO's ou View Models para ficarem expostos respeitando as regras de negócios da aplicação.
+O projeto está dividido em camadas, a camada de negócio possuí models que não podem ficar expostas. Para isso não ocorrer são criados 
+os DTO's ou View Models para ficarem expostas respeitando as regras de negócios da aplicação.
+
+Setup - Controllers e Startup
+
+Criando MainController:
+
+Uma classe abstrata que servirá como base das controllers e também para validaçãoes de erro, modelstate e operação de negócios.
+
+Crinado FonecedoresController:
+
+Uma classe que herda da classe MainController. 
+Devemos adicionar a rota.
+Não é necessário implementar um action result para listar todos os fornecedores, porque ao retornar um resultado já é retornado o status
+code 200.
+Precisamos injetar a dependência da classe Repository.
+Precisamos converter as models do banco de dados para os DTO's. Para isso utilizamos a ferramenta AutoMapper.
+
+Comando para instalar o AutoMapper
+````
+install-package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 6.1
+````
+
 
 
 
