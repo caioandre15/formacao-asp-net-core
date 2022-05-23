@@ -621,7 +621,19 @@ Criar o banco:
 update-database -verbose
 ````
 
-Modelando a controller de Fornecedores:
+Modelando a controller de Fornecedores:  
+
+Criado o método ObterPorId:  
+- Foi criado um método auxiliar ObterFornecedorProdutosEndereco para consultar o repositório;  
+- Depois é validado o retorno.  
+
+Criado o método Adicionar:  
+- Foi verificado a validação ModelState.Isvalid.  
+- Foi injeto o serviço de forncedor que aplica as validações da camada de negócio.  
+- É validado o retorno.
+
+
+
 
 
 
