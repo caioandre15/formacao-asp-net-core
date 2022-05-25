@@ -648,6 +648,11 @@ Criado a consulta de endereço:
 Atualizar endereço:
 - Injeção de depêndencia IEnderecoRepository.
 
+Foi adicionado na Controller Fornecedor:
+````
+INotificador notificador) : base(notificador)
+````
+
 
 
 
