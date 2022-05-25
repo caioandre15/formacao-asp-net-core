@@ -642,6 +642,14 @@ Criando o método Remover:
 - É invocado o serviço de forncedor com o método de Remover.  
 - É validado o retorno.  
 
+Criado a consulta de endereço:
+- É necessário criar uma nova rota, quando temos mais de um Get por id.
+
+Atualizar endereço:
+- Injeção de depêndencia IEnderecoRepository.
+
+
+
 
 
 
