@@ -632,11 +632,11 @@ Criado o método Adicionar:
 - Foi injeto o serviço de forncedor que aplica as validações da camada de negócio.  
 - É validado o retorno.
 
-Criando o método Atualizar:  
+Criado o método Atualizar:  
 - Adicionar validação se o id da rota é igual ao id passado no body.
 - Depois seguir com o mesmo padrão do método adicionar, apenas alterando o método para atualizar.
 
-Criando o método Remover:  
+Criado o método Remover:  
 - Foi criado um método auxiliar ObterFornecedorEndereco para consultar o repositório.  
 - Caso o fornecedor não seja encontrado é retornado BadRequest.  
 - É invocado o serviço de forncedor com o método de Remover.  
@@ -652,6 +652,15 @@ Foi adicionado na Controller Fornecedor:
 ````
 INotificador notificador) : base(notificador)
 ````
+
+Cadastro de Produtos e upload de Imagem:
+
+- Criado uma nova controller ProdutoController;
+- Inserindo a imagem do produto em base 64:
+  - Criar um método de upload de arquivos.
+  - Pasta de imagens em wwwroot
+
+
 
 
 
