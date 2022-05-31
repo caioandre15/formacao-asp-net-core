@@ -657,8 +657,11 @@ Cadastro de Produtos e upload de Imagem:
 
 - Criado uma nova controller ProdutoController;
 - Inserindo a imagem do produto em base 64:
-  - Criar um método de upload de arquivos.
-  - Pasta de imagens em wwwroot
+
+Consumindo API via Angular 7
+
+Foi adicionado o projeto de FE desenvolvido em angular ao projeto e realizado o entendimento do funcionamento do fluxo de cadastro de produtos.
+
 
 
 
