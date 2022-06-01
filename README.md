@@ -666,6 +666,16 @@ Upload de arquivos grandes:
 Alterar o tipo String para IFormfile. A diferença é deste tipo é que faz o streaming deste dado reduzindo o impacto de um envio de uma imagem grande.
 São realizados várias técnicas para que isso ocorra, mas basicamente é entender como enviar a imagem via Query Params junto ao objeto serializado "produto".
 
+### Segurança
+
+Autenticação de uma API:
+Adicionar o atributo [Authorize] restringir o acesso para sua API. Para restringir todos os métodos, pode ser colocado apenas na Controller.
+Adicionar o atributo [AllowAnonymous] permite usuários anonimos.
+
+
+
+
+
 
 
 
