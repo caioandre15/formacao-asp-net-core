@@ -670,33 +670,44 @@ São realizados várias técnicas para que isso ocorra, mas basicamente é enten
 
 Autenticação de uma API:
 Adicionar o atributo [Authorize] restringir o acesso para sua API. Para restringir todos os métodos, pode ser colocado apenas na Controller.
-Adicionar o atributo [AllowAnonymous] permite usuários anonimos.
+Adicionar o atributo [AllowAnonymous] permite usuários anonimos. Pode ser adicionado para liberar apenas um método da controller.
 
+Implementando o ASP.NET Identity:
+Criar a classe IdentityConfig.cs dentro da pasta Configuration.
+Criar uma pasta Data para adicionar um novo contexto para o identity.
+Adicionar o contexto:
+````
+services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+````
 
+Criar as Migrations:
 
+````
+add-migration Identity -Context ApplicationDbContext
+````
 
+Criar as tabelas:
 
+````
+update-database -Context ApplicationDbContext
+````
 
+Adicionar o Identity ao projeto:
+````
+services.AddDefaultIdentity<IdentityUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+````
 
+Adicionar na classe StartUp:
 
+````
+app.UseAuthentication();
+````
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Criar uma controller de autenticação:
 
 
 
