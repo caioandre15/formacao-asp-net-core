@@ -709,6 +709,7 @@ app.UseAuthentication();
 
 Criar uma controller de autenticação:
 
+- Utilizar  a injeção de depêndencia das classes SignInManage e UserManager;
 
 
 
