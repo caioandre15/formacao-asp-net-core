@@ -711,6 +711,11 @@ Criar uma controller de autenticação:
 
 - Utilizar  a injeção de depêndencia das classes SignInManage e UserManager;
 
+Adicionar Mensagens em Português para os retornos do identity.
+- Criar uma classe chamada IdentityMensagensPortugues e m Extensions.
+- Adicionar as mensagens na classe.
+- Adicionar a refereência em identity config em Configuration.
+
 
 
 
