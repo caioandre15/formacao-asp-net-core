@@ -716,6 +716,18 @@ Adicionar Mensagens em Português para os retornos do identity.
 - Adicionar as mensagens na classe.
 - Adicionar a refereência em identity config em Configuration.
 
+JWT - JSON WEB TOKEN
+
+Fluxo:
+- Cliente envia usuário e senha.
+- API retorna token.
+- Cliente armazena o token e utiliza para acessar toda a aplicação.
+
+JWT.
+Vermelho - Headers Criptográfia e tipo do Token.
+Rosa - Dados
+Azul - Assinatura com a chave secreta
+
 
 
 
