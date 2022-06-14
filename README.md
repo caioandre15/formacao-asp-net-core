@@ -728,6 +728,10 @@ Vermelho - Headers Criptográfia e tipo do Token.
 Rosa - Dados
 Azul - Assinatura com a chave secreta
 
+Autorização baseada em Claims via JWT.
+
+Criar classe CustomAuthorize em Extensions.
+Refatorar classe AuthController para que seja adicionado as claims no token.
 
 
 
