@@ -662,6 +662,11 @@ Consumindo API via Angular 7
 
 Foi adicionado o projeto de FE desenvolvido em angular ao projeto e realizado o entendimento do funcionamento do fluxo de cadastro de produtos.
 
+Comandos:
+````
+ng s  -> Para compilar e executar o projeto FE.
+````
+
 Upload de arquivos grandes:
 Alterar o tipo String para IFormfile. A diferença é deste tipo é que faz o streaming deste dado reduzindo o impacto de um envio de uma imagem grande.
 São realizados várias técnicas para que isso ocorra, mas basicamente é entender como enviar a imagem via Query Params junto ao objeto serializado "produto".
@@ -709,7 +714,7 @@ app.UseAuthentication();
 
 Criar uma controller de autenticação:
 
-- Utilizar  a injeção de depêndencia das classes SignInManage e UserManager;
+- Utilizar a injeção de depêndencia das classes SignInManage e UserManager;
 
 Adicionar Mensagens em Português para os retornos do identity.
 - Criar uma classe chamada IdentityMensagensPortugues e m Extensions.
