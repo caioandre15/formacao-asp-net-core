@@ -732,6 +732,7 @@ Autorização baseada em Claims via JWT.
 
 Criar classe CustomAuthorize em Extensions.
 Refatorar classe AuthController para que seja adicionado as claims no token.
+Adicionar o LoginresponseViewModel para que seja retornado não apenas o token, mas as claims e dados referentes a criação do token.
 
 
 
