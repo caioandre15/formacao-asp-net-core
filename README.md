@@ -739,6 +739,13 @@ Criar classe CustomAuthorize em Extensions.
 Refatorar classe AuthController para que seja adicionado as claims no token.
 Adicionar o LoginresponseViewModel para que seja retornado não apenas o token, mas as claims e dados referentes a criação do token.
 
+Interagindo com usuário logado em qualquer camada:
+
+- Criar uma iterface chamada IUser na camada de negócio;  
+- Criar uma classe na camada da API na pasta Extension para implementar a interface criada;  
+- Resolver a dependência em DependencyInjectionConfig e reolver as classes adicionadas;  
+- Adicionar implementação na classe MainController;  
+- Adicionar IUser nos construtores da Controllers que herdem da MainController;    
 
 
 
