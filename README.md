@@ -757,6 +757,10 @@ Cors é um relaxamento para receber requisições de outras origens em uma aplic
 
 [EnableCors("Development")] - Só funciona se não tiver uma politica global configurada.
 
+### Versionamento e Documentação da API
+
+
+
 
 
 
