@@ -747,6 +747,15 @@ Interagindo com usuário logado em qualquer camada:
 - Adicionar implementação na classe MainController;  
 - Adicionar IUser nos construtores da Controllers que herdem da MainController;    
 
+CORS - Cross-Origin Resource Sharing (Compartilhamento de recursos com origens diferentes) é um mecanismo que usa cabeçalhos adicionais HTTP para informar a um navegador que permita que um aplicativo Web seja executado em uma origem (domínio) com permissão para acessar recursos selecionados de um servidor em uma origem distinta. Um aplicativo Web executa uma requisição cross-origin HTTP ao solicitar um recurso que tenha uma origem diferente (domínio, protocolo e porta) da sua própria origem.
+
+[https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS)
+
+Cors é um relaxamento para receber requisições de outras origens em uma aplicação.
+
+[DisableCors] - Apenas para desabilitar o cors em uma controller.
+
+[EnableCors("Development")] - Só funciona se não tiver uma politica global configurada.
 
 
 
