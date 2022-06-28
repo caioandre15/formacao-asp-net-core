@@ -759,6 +759,14 @@ Cors é um relaxamento para receber requisições de outras origens em uma aplic
 
 ### Versionamento e Documentação da API
 
+Para versionar precisamos  instalar dois pacotes.  
+Em Package Manager Console digite os comandos para instalar.
+
+````
+Install-Package Microsoft.AspNetCore.Mvc.Versioning -Version 3.1.2
+Install-Package Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer -Version 3.2.0
+````
+
 
 
 
