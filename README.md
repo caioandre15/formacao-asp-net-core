@@ -761,7 +761,7 @@ Cors é um relaxamento para receber requisições de outras origens em uma aplic
 
 Versionamento:  
 
-Para versionar precisamos  instalar dois pacotes.  
+Para versionar precisamos instalar dois pacotes.  
 Em Package Manager Console digite os comandos para instalar.
 
 ````
@@ -772,6 +772,12 @@ Install-Package Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer -Version 3.2.0
 Adicionar as configurações em ApiConfig. e adicionar o versionamento na rota das controllers.  
 
 Documentação a API com Swager:  
+
+Para documentar precisamos instalar o pacote abaixo:  
+
+````
+Install-Package Swashbuckle.AspnetCore -Version 4.0.1
+````
 
 
 
