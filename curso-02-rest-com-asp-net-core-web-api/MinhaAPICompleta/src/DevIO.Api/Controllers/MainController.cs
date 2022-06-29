@@ -35,7 +35,7 @@ namespace DevIO.Api.Controllers
                 UsuarioAutenticado = true;
             }
         }
-        
+
         protected bool OperacaoValida()
         {
             return !_notificador.TemNotificacao();
