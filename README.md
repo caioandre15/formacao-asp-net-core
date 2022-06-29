@@ -767,6 +767,10 @@ Install-Package Microsoft.AspNetCore.Mvc.Versioning -Version 3.1.2
 Install-Package Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer -Version 3.2.0
 ````
 
+Adicionar as congigurações em ApiConfig. e adicionar o versionamento na rota das controllers.  
+
+
+
 
 
 
