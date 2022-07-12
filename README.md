@@ -805,7 +805,11 @@ _logger.LogWarning("Log de aviso");
 _logger.LogError("Log de Erro");
 _logger.LogCritical("Log de Problema Critico");
 ````
+[Doc Microsoft](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/logging/?view=aspnetcore-6.0)  
 
+Provedores de log de terceiros:  
+[elmah.io](https://elmah.io/)
+[KissLog.net](https://kisslog.net/)
 
 
 
