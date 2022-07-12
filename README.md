@@ -795,6 +795,16 @@ Exemplo de Log:
 ````
 _logger.LogInformation("Usuário" + loginUser.Email + " logado com sucesso");
 ````
+Niveis de log:
+
+````
+_logger.LogTrace("Log de Trace");
+_logger.LogDebug("Log de debug");
+_logger.LogInformation("Log de informação");
+_logger.LogWarning("Log de aviso");
+_logger.LogError("Log de Erro");
+_logger.LogCritical("Log de Problema Critico");
+````
 
 
 
