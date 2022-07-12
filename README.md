@@ -781,6 +781,10 @@ Install-Package Swashbuckle.AspnetCore -Version 4.0.1
 Adicionar configuração padrão na classe startup.
 
 
+### Logging e Monitoramento
+
+
+
 
 
 
