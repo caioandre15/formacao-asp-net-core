@@ -783,6 +783,15 @@ Adicionar configuração padrão na classe startup.
 
 ### Logging e Monitoramento
 
+Adicionando o logging na controller:
+````
+private readonly ILogger _logger
+
+Adicionando no construtor:
+ILogger<Nome da Controller> logger
+_logger = logger;
+````
+
 
 
 
