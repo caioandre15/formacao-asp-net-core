@@ -781,9 +781,9 @@ Install-Package Swashbuckle.AspnetCore -Version 4.0.1
 Adicionar configuração padrão na classe startup.
 
 
-### Logging e Monitoramento
+### Logging e Monitoramento  
 
-Adicionando o logging na controller:
+Adicionando o logging na controller:  
 ````
 private readonly ILogger _logger
 
@@ -791,7 +791,7 @@ Adicionando no construtor:
 ILogger<Nome da Controller> logger
 _logger = logger;
 ````
-Exemplo de Log:
+Exemplo de Log:  
 ````
 _logger.LogInformation("Usuário" + loginUser.Email + " logado com sucesso");
 ````
