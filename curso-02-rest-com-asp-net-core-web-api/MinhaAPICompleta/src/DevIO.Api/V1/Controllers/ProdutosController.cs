@@ -17,8 +17,8 @@ namespace DevIO.Api.V1.Controllers
 {
     [Authorize]
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}/[controller]")]
-    [ApiController]
+    [Route("api/v{version:apiVersion}/produtos")]
+ 
     public class ProdutosController : MainController
     {
         private readonly IProdutoRepository _produtoRepository;
@@ -104,7 +104,7 @@ namespace DevIO.Api.V1.Controllers
         }
 
         [ClaimsAuthorize("Produto", "Adicionar")]
-        [HttpPost("adicionar")]
+        [HttpPost("Adicionar")]
         public async Task<ActionResult<ProdutoViewModel>> AdicionarAlternativo(ProdutoImagemViewModel produtoViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);

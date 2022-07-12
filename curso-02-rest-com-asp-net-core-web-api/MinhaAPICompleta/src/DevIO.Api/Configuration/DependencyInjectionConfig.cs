@@ -29,6 +29,8 @@ namespace DevIO.Api.Configuration
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IUser, AspNetUser>();
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             return services;
         }
     }
