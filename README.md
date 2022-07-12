@@ -791,8 +791,10 @@ Adicionando no construtor:
 ILogger<Nome da Controller> logger
 _logger = logger;
 ````
-
-
+Exemplo de Log:
+````
+_logger.LogInformation("Usuário" + loginUser.Email + " logado com sucesso");
+````
 
 
 
