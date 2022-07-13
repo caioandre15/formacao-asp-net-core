@@ -783,6 +783,8 @@ Adicionar configuração padrão na classe startup.
 
 ### Logging e Monitoramento  
 
+O Logging tem um função importante, pois sinaliza que nossa aplicação está com algum problema.
+
 Adicionando o logging na controller:  
 ````
 private readonly ILogger _logger
