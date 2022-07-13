@@ -783,7 +783,7 @@ Adicionar configuração padrão na classe startup.
 
 ### Logging e Monitoramento  
 
-O Logging tem um função importante, pois sinaliza que nossa aplicação está com algum problema.
+O Logging tem um função importante, pois sinaliza que nossa aplicação está com algum problema. Também pode ser utilizado para coletar informações durante o uso da aplicação.
 
 Adicionando o logging na controller:  
 ````
