@@ -813,6 +813,16 @@ Provedores de log de terceiros:
 [elmah.io](https://elmah.io/)
 [KissLog.net](https://kisslog.net/)
 
+Instalando Elmah, após criação de conta no site:
+
+````
+Install-Package Elmah.Io.AspNetCore -Version 3.6.63
+````
+
+Instalando pacote para que o elmah reconheça logs do .Net
+````
+Install-Package Elmah.Io.Extensions.Logging -Version 3.4.38
+````
 
 
 
