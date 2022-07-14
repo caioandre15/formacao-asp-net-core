@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DevIO.Api.Configuration;
+using DevIO.Api.Extensions;
 using DevIO.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -43,6 +44,8 @@ namespace DevIO.Api
 
             services.AddSwaggerConfig();
 
+            services.AddLoggingConfiguration();
+
             services.ResolveDependencies();
         }
 
@@ -62,13 +65,19 @@ namespace DevIO.Api
                 app.UseHsts();
             }
             app.UseStaticFiles();
+
             app.UseCookiePolicy();
             
             app.UseAuthentication();
+
+            app.UseMiddleware<ExceptionMiddleware>();
+
             app.UseMvcConfiguration();
 
             app.UseSwaggerConfig(provider);
-          
+
+            app.UseLoggingConfiguration();
+
         }
     }
 }
