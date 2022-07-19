@@ -826,6 +826,14 @@ Install-Package Elmah.Io.Extensions.Logging -Version 3.4.38
 
 HealthChecks  
 
+Adicionar o serviço de HeakthChecks na Startup:  
+````
+services.AddHealthChecks();
+app.UseHealthChecks("hc");
+````
+
+Para instalar o monitoramento HealthChecks para além da verificação de que a API está respondendo,
+podemos instalar o pacote Xabaril. Como exemplo de monitorar a saúde do banco de dados iremos seguir os passos abaixo.
 
 
 
