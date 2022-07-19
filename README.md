@@ -824,6 +824,9 @@ Instalando pacote para que o elmah reconheça logs do .Net
 Install-Package Elmah.Io.Extensions.Logging -Version 3.4.38
 ````
 
+HealthChecks  
+
+
 
 
 
