@@ -836,8 +836,12 @@ Para instalar o monitoramento HealthChecks para além da verificação de que a 
 podemos instalar o pacote Xabaril. Como exemplo de monitorar a saúde do banco de dados iremos seguir os passos abaixo.
 
 
-Instalar o pacote para direcionar o healthCheck para o elmah:
+Instalar o pacotes:
 ````
+Install-Package Elmah.Io.AspNetCore -Version 3.6.63
+Install-Package Elmah.Io.Extensions.Logging -Version 3.4.38
+Install-Package AspNetCore.HealthChecks.SqlServer
+Install-Package aspnetcore.healthchecks.ui -Version 2.2.28
 Install-Package Elmah.Io.AspNetCore.HealthChecks
 ````
 
