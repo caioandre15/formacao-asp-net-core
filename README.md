@@ -847,6 +847,18 @@ Install-Package Elmah.Io.AspNetCore.HealthChecks
 
 ## Curso 03 - Dominando o ASP.NET MVC Core
 
+O padrão MVC:  
+
+Model, View, Controller - juntos se tornam um padrão arquitetural.
+Separação de responsabilidades.  
+Criado pela Xerox.  
+Controller, controla o fluxo do padrão MVC.
+Exemplo de fluxo:  
+A controller é acionada via uma requisição http. http://erp.com.br/clientes/alterar/10
+Sua missão é buscar o clientes no banco de dados e passar as informações para a Model.  
+A model seria uma classe contendo todos os atributos e propriedades necesárias.
+Depois a controller tem a missão de chamar a view para exibir na tela os dados da model para o cliente.  
+
 
 
 
