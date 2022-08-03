@@ -859,6 +859,11 @@ Sua missão é buscar o clientes no banco de dados e passar as informações par
 A model seria uma classe contendo todos os atributos e propriedades necesárias.
 Depois a controller tem a missão de chamar a view para exibir na tela os dados da model para o cliente.  
 
+O que são rotas?  
+Rotas são basicamente estruturas de navegação personalizadas para que a URL da aplicação possua determinado
+padrão e atenda as necessidades de passagem de parâmetros.
+
+
 
 
 
