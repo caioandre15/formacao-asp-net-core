@@ -861,7 +861,15 @@ Depois a controller tem a missão de chamar a view para exibir na tela os dados 
 
 O que são rotas?  
 Rotas são basicamente estruturas de navegação personalizadas para que a URL da aplicação possua determinado
-padrão e atenda as necessidades de passagem de parâmetros.
+padrão e atenda as necessidades de passagem de parâmetros.  
+
+Action Results:  
+No ASP.NET Core um Action Result é o tipo de retorno da action da controller, é utilizada a interface IActionResult que
+pode retornar alguns tipos de resultados, o mais comum é o viewReult, mas pode retornar um jsonResult e até códigos Html.  
+
+
+
+
 
 
 
