@@ -867,6 +867,22 @@ Action Results:
 No ASP.NET Core um Action Result é o tipo de retorno da action da controller, é utilizada a interface IActionResult que
 pode retornar alguns tipos de resultados, o mais comum é o viewReult, mas pode retornar um jsonResult e até códigos Html.  
 
+Na Controller Home são chamadas as views, quando o nome do método é igual ao nome da view, não é necessário especificar view.
+Caso o nome seja diferente é necessário especificar.  
+ex:  
+````
+public IActionResult Privacy()
+{
+  return View();
+}
+
+
+public IActionResult Privacys()
+{
+  return View("Privacy");
+}
+````
+
 
 
 
