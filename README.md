@@ -867,6 +867,7 @@ Action Results:
 No ASP.NET Core um Action Result é o tipo de retorno da action da controller, é utilizada a interface IActionResult que
 pode retornar alguns tipos de resultados, o mais comum é o viewReult, mas pode retornar um jsonResult e até códigos Html.  
 
+Convenções:  
 Na Controller Home são chamadas as views, quando o nome do método é igual ao nome da view, não é necessário especificar view.
 Caso o nome seja diferente é necessário especificar.  
 ex:  
@@ -882,6 +883,17 @@ public IActionResult Privacys()
   return View("Privacy");
 }
 ````
+
+Ao criar uma rota nova em app.UseMvc(routes) sempre devemos criar a rota em cima da rota default (Home).
+
+Na rota podemos adicionar um parametro do modo tradicional.  
+Ex:  
+https://localhost:44306/Home/index/10/?categorias=Teste
+Caso precise adicionar mais de um parametro:
+https://localhost:44306/Home/index/10/?categorias=Teste&produto=Teste2
+
+
+
 
 
 
