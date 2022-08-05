@@ -892,7 +892,25 @@ https://localhost:44306/Home/index/10/?categorias=Teste
 Caso precise adicionar mais de um parametro:  
 https://localhost:44306/Home/index/10/?categorias=Teste&produto=Teste2  
 
+Rota por parametro:  
 Na sobre carga das rotas a última sempre vai prevalecer as anteriores.
+
+````
+[Route("")] Importante para utilizar um rota padrão na controller e não ter que repetir em cada rota e retirar a obrigatorieadade de mencionar a rota padrão. 
+Entrando diretamnete na controller padrão.
+Exemplo:  
+    [Route("")]
+    [Route("gestao-clientes")]
+    public class HomeController : Controller
+    {
+        [Route("")]
+        [Route("pagina-inicial")]
+        [Route("pagina-inicial/{id}/{categoria?}")]
+        public IActionResult Index(string id, string categoria)
+        {
+            return View();
+        }
+````
 
 
 
