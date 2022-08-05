@@ -884,13 +884,15 @@ public IActionResult Privacys()
 }
 ````
 
-Ao criar uma rota nova em app.UseMvc(routes) sempre devemos criar a rota em cima da rota default (Home).
+Ao criar uma rota nova em app.UseMvc(routes) sempre devemos criar a rota em cima da rota default (Home).  
 
 Na rota podemos adicionar um parametro do modo tradicional.  
 Ex:  
-https://localhost:44306/Home/index/10/?categorias=Teste
-Caso precise adicionar mais de um parametro:
-https://localhost:44306/Home/index/10/?categorias=Teste&produto=Teste2
+https://localhost:44306/Home/index/10/?categorias=Teste  
+Caso precise adicionar mais de um parametro:  
+https://localhost:44306/Home/index/10/?categorias=Teste&produto=Teste2  
+
+Na sobre carga das rotas a última sempre vai prevalecer as anteriores.
 
 
 
